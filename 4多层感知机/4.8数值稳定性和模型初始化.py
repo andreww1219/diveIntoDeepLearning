@@ -1,4 +1,7 @@
 from torch import nn
+from torch.utils.data import TensorDataset
+
+
 # 初始化模型参数
 def init_weights(m):
     if type(m) == nn.Linear:
@@ -6,3 +9,5 @@ def init_weights(m):
         # nn.init.xavier_normal_(m.weight)  # 正态分布的 Xavier 初始化
         if m.bias is not None:
             nn.init.constant_(m.bias, 0)  # 偏置项初始化为 0
+
+TensorDataset()
